@@ -1,18 +1,48 @@
-# SDLC Roles & Deliverables Framework
+# SDLC Role Doc Engineering
 
-Web-focused Agile/Scrum SDLC role definitions, output specifications, and reusable templates.
+Role-first SDLC document engineering framework with reusable templates, standards, and a complete example project.
 
-## Quick Start
+## Structure
+
+```
+.
+├── README.md
+├── .gitignore
+├── templates/
+│   ├── roles/
+│   ├── standards/
+│   └── deliverable-templates/
+├── examples/
+│   └── shopwave/
+│       ├── README.md
+│       ├── project-info.md
+│       ├── roles/
+│       ├── deliverables/
+│       ├── decisions/
+│       ├── sprint-artifacts/
+│       ├── docs/
+│       └── audit/
+└── skills/
+    └── sdlc-role-doc-engineering/
+        ├── SKILL.md
+        ├── assets/
+        ├── references/
+        └── scripts/
+```
+
+## Usage
+
+1. **Role definitions**: `templates/roles/` contains reusable role definitions.
+2. **Deliverable templates**: `templates/deliverable-templates/` contains blank templates.
+3. **Standards**: `templates/standards/` contains project-wide standards.
+4. **Example project**: `examples/shopwave/` shows filled deliverables and enriched role definitions.
+5. **Skill**: `skills/sdlc-role-doc-engineering/` encodes the SOP for reuse.
+
+## Quick start
 
 ```bash
-# Browse roles
-ls roles/
-
-# Browse deliverables by phase
-ls deliverables/
-
-# Use a template
-cp templates/user-story-template.md deliverables/product/user-stories.md
+# Validate ShopWave example artifacts
+python3 skills/sdlc-role-doc-engineering/scripts/validate_docs.py .
 ```
 
 ## Role Catalog
@@ -48,10 +78,3 @@ cp templates/user-story-template.md deliverables/product/user-stories.md
 - Naming Conventions - Files, versions, metadata
 - Code Review Standards - Review criteria and process
 - Quality Gates - Review checkpoints and validation
-
-## Usage
-
-1. **Role Definition**: Each role file defines responsibilities, outputs, and file dimensions
-2. **Deliverable Creation**: Use templates in `templates/` for consistent output
-3. **Quality Assurance**: Follow standards in `standards/` for all artifacts
-4. **Review Process**: Use quality gates before phase transitions
